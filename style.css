@@ -1,0 +1,507 @@
+/* /* ===============================
+   GLOBAL STYLES
+================================ */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: gold;
+}
+
+/* ===============================
+   HEADER & FOOTER
+================================ */
+header, footer {
+    text-align: center;
+    padding: 25px;
+    background: #111;
+    border-bottom: 1px solid gold;
+}
+
+/* ===============================
+   SECTIONS
+================================ */
+.slide {
+    padding: 30px;
+    border-bottom: 1px solid gold;
+}
+
+/* ===============================
+   ITEMS GRID
+================================ */
+.items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ===============================
+   ITEM CARD
+================================ */
+.card {
+    background: #1a1a1a;
+    padding: 20px;
+    width: 200px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+/* ===============================
+   JEWELLERY IMAGES
+================================ */
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid gold;
+}
+
+/* ===============================
+   BUTTON STYLES + CLICK ANIMATION
+================================ */
+button {
+    background: gold;
+    color: black;
+    border: none;
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Click shrink + glow */
+button:active {
+    transform: scale(0.9);
+    box-shadow: 0 0 20px gold;
+}
+
+/* Ripple animation */
+button::after {
+    content: "";
+    position: absolute;
+    width: 140%;
+    height: 140%;
+    background: rgba(255, 215, 0, 0.35);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.4s ease;
+}
+
+button:active::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* ===============================
+   FORM INPUTS
+================================ */
+input, textarea {
+    width: 80%;
+    padding: 8px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid gold;
+    background: #000;
+    color: gold;
+}
+
+/* ===============================
+   CART LIST
+================================ */
+#cart {
+    list-style: none;
+    padding: 0;
+}
+
+/* ===============================
+   PULSE ANIMATION (JS TRIGGERED)
+================================ */
+.pulse {
+    animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.25); }
+    100% { transform: scale(1); }
+}
+/* ===============================
+   HERO SLIDE – ANIMATED BLACK UI
+================================ */
+.hero-slide {
+    position: relative;
+    height: 100vh;
+
+    /* ✅ WORKING Black + Gold Texture */
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.88),
+            rgba(220, 213, 221, 0.95)
+        ),
+        url("https://images.pexels.com/photos/936031/pexels-photo-936031.jpeg?auto=compress&cs=tinysrgb&w=1600");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        rgba(141, 15, 15, 0.9),
+        rgba(20,20,20,0.8),
+        rgba(4, 67, 126, 0.95)
+    );
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    animation: fadeUp 1.6s ease;
+}
+
+.hero-title {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, gold, #ffdd77, gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: goldShine 1s infinite linear;
+}
+
+.hero-subtitle {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #e5c76b;
+    opacity: 0.9;
+}
+
+.hero-btn {
+    margin-top: 30px;
+    padding: 12px 28px;
+    border-radius: 30px;
+    background: transparent;
+    border: 2px solid gold;
+    color: gold;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: gold;
+    color: black;
+    box-shadow: 0 0 30px gold;
+}
+
+/* Gold particles */
+.gold-particles {
+    position: absolute;
+    inset: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+
+.gold-particles li {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: gold;
+    opacity: 0.4;
+    border-radius: 50%;
+    animation: float 12s infinite linear;
+}
+
+.gold-particles li:nth-child(1) { left: 10%; animation-duration: 10s; }
+.gold-particles li:nth-child(2) { left: 20%; animation-duration: 14s; }
+.gold-particles li:nth-child(3) { left: 35%; animation-duration: 11s; }
+.gold-particles li:nth-child(4) { left: 50%; animation-duration: 16s; }
+.gold-particles li:nth-child(5) { left: 65%; animation-duration: 13s; }
+.gold-particles li:nth-child(6) { left: 75%; animation-duration: 18s; }
+.gold-particles li:nth-child(7) { left: 85%; animation-duration: 15s; }
+.gold-particles li:nth-child(8) { left: 30%; animation-duration: 12s; }
+.gold-particles li:nth-child(9) { left: 55%; animation-duration: 17s; }
+.gold-particles li:nth-child(10){ left: 90%; animation-duration: 19s; }
+
+@keyframes float {
+    0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+}
+
+@keyframes goldShine {
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
+}
+
+@keyframes fadeUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+/* Button border animation on click */
+.animated-btn {
+    position: relative;
+    z-index: 1;
+}
+
+.animated-btn::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 22px;
+    background: linear-gradient(90deg, #ffb300, #ff6f00, #ffd54f);
+    background-size: 200% 200%;
+    z-index: -1;
+    animation: borderMove 1s linear infinite;
+}
+
+@keyframes borderMove {
+    from { background-position: 0% 50%; }
+    to { background-position: 200% 50%; }
+}
+
+/* ===============================
+   ANIMATED CART DESIGN
+================================ */
+
+.cart-animated {
+    background: linear-gradient(135deg, #000000, #f2cc70);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(151, 123, 32, 0.404);
+}
+
+/* Cart items list */
+.cart-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+/* Each cart item */
+.cart-list li {
+    background: rgba(3, 0, 0, 0.7);
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-weight: 500;
+    border-left: 5px solid #d4af37;
+
+    animation: slideInCart 0.4s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.cart-list li:hover {
+    transform: translateX(6px);
+    box-shadow: 0 0 15px rgba(212,175,55,0.6);
+}
+
+/* Slide animation */
+@keyframes slideInCart {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Total box */
+.cart-total-box {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+/* Pulse animation for total */
+.pulse {
+    animation: pulseAnim 0.4s ease;
+}
+
+@keyframes pulseAnim {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+/* ===============================
+   KG KART ANIMATED HEADER
+================================ */
+
+.kg-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(
+        120deg,
+        #fff3c4,
+        #f5c97a,
+        #fff3c4
+    );
+    background-size: 300% 300%;
+    animation: goldFlow 8s infinite linear;
+    border-bottom: 2px solid #cfa437;
+}
+
+@keyframes goldFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.kg-header-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 14px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LOGO */
+.logo-center {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    color: #3a2600;
+}
+
+.logo-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ffd700, #cfa437);
+    animation: rotateGlow 2.5s linear infinite;
+}
+
+@keyframes rotateGlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.logo-text {
+    animation: glowText 2s infinite alternate;
+}
+
+@keyframes glowText {
+    from { text-shadow: 0 0 5px #fff; }
+    to { text-shadow: 0 0 15px #d4af37; }
+}
+
+/* NAV BUTTONS */
+.nav-left,
+.nav-right {
+    display: flex;
+    gap: 18px;
+}
+
+.nav-btn {
+    text-decoration: none;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: #3a2600;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+/* Animated border */
+.nav-btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background: linear-gradient(90deg, #ffd700, #ff9800, #ffd700);
+    background-size: 200% 200%;
+    animation: borderMove 2s linear infinite;
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+@keyframes borderMove {
+    from { background-position: 0% 50%; }
+    to { background-position: 200% 50%; }
+}
+
+.nav-btn:hover {
+    color: #fff;
+    background: #3a2600;
+}
+
+/* ===============================
+   CONTACT US - POPUP ANIMATION
+================================ */
+
+.contact-section {
+    padding: 50px;
+    text-align: center;
+    background: linear-gradient(135deg, #0f0e0b, #000000);
+    border-radius: 20px;
+}
+
+.contact-box {
+    background: #fff;
+    margin: 15px auto;
+    max-width: 350px;
+    padding: 15px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(212,175,55,0.6);
+}
+
+.contact-detail {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* Visible state */
+.contact-box.active .contact-detail {
+    max-height: 100px;
+    opacity: 1;
+}

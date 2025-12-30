@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1 Gram Gold Jewellery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- ================= ANIMATED HEADER ================= -->
+<header class="kg-header">
+    <div class="kg-header-container">
+
+        <!-- LEFT -->
+        <div class="nav-left">
+            <a href="#jewellery" class="nav-btn">Jewelleries</a>
+        </div>
+
+        <!-- CENTER LOGO -->
+        <div class="logo-center">
+            <div class="logo-circle"></div>
+            <span class="logo-text">KG Kart</span>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="nav-right">
+            <a href="#contact" class="nav-btn">Contact Us</a>
+            <a href="#feedback" class="nav-btn">Feedback</a>
+        </div>
+
+    </div>
+</header>
+
+<!-- ================= HERO SLIDE ================= -->
+<section class="hero-slide">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <h1 class="hero-title">1 Gram Gold Jewellery</h1>
+        <p class="hero-subtitle">
+            Elegant • Affordable • Premium Shine
+        </p>
+
+        <button class="hero-btn"
+            onclick="document.getElementById('jewellery').scrollIntoView({behavior:'smooth'})">
+            Explore Collection
+        </button>
+    </div>
+
+    <ul class="gold-particles">
+        <li></li><li></li><li></li><li></li><li></li>
+        <li></li><li></li><li></li><li></li><li></li>
+    </ul>
+</section>
+
+<!-- ================= JEWELLERY SECTION ================= -->
+<!-- ================= SIMPLE JEWELLERY SECTION ================= -->
+<section id="jewellery" class="slide premium-bg">
+    <h2>Simple Gold Jewelleries</h2>
+    <p class="section-subtitle">Minimal • Elegant • Everyday Wear</p>
+
+    <div class="items">
+
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwIJ4yuHTQEIb-EgXkL7xsed08x0r8gkBUVg&s" alt="Gold Ring">
+            <h3>Gold Ring</h3>
+            <p>₹1200</p>
+            <button onclick="addToCart('Simple Gold Ring',1200)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoIalIvYdQKYyo_eTCAo0ky5m8pFv-95bnOg&s" alt="Gold Chain">
+            <h3>Classic Gold Chain</h3>
+            <p>₹2300</p>
+            <button onclick="addToCart('Classic Gold Chain',2300)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxm6yfz3pDr2X8JVbQlf_AXcLXSPVQ1ldeig&s" alt="Gold Earrings">
+            <h3>Gold Earrings</h3>
+            <p>₹1600</p>
+            <button onclick="addToCart('Gold Stud Earrings',1600)">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+<!-- ================= PREMIUM JEWELLERY SECTION ================= -->
+<section class="slide premium-bg">
+    <h2>Premium Gold Jewelleries</h2>
+    <p class="section-subtitle">Luxury • Designer • Exclusive</p>
+
+    <div class="items">
+
+        <div class="card">
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDiJPQGY_9KA3yGLf25eNYftbmrEPZn01Bqw&s" alt="Gold Bracelet">
+            <h3>Premium Gold Bracelet</h3>
+            <p>₹2800</p>
+            <button onclick="addToCart('Premium Gold Bracelet',2800)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTb4Q5rN9jZmh52_iCOG08pJ7QWqe5_nYEuw&s" alt="Gold Pendant">
+            <h3>Designer Gold Pendant</h3>
+            <p>₹2000</p>
+            <button onclick="addToCart('Designer Gold Pendant',2000)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR92u2FMQkp6FJvi-LjE_ZeitVXcCuGzvO1SQ&s" alt="Real Gold Bangles">
+            <h3>Premium Gold Bangles</h3>
+            <p>₹3200</p>
+            <button onclick="addToCart('Premium Gold Bangles',3200)">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= SIMPLE CART SECTION ================= -->
+<section class="slide cart-bg cart-animated">
+    <h2>🛒 Your Cart</h2>
+
+    <ul id="cart" class="cart-list"></ul>
+
+    <p class="cart-total-box">
+        Total Amount: ₹<span id="total">0</span>
+    </p>
+
+    <input type="text" id="coupon" placeholder="Enter Coupon Code">
+    <button onclick="applyCoupon()">Apply Coupon</button>
+</section>
+
+<!-- ================= CONTACT US ================= -->
+<section id="contact" class="contact-section">
+    <h2>📞 Contact Us</h2>
+
+    <div class="contact-box" onclick="toggleContact(this)">
+        <h3>📱 Phone</h3>
+        <p class="contact-detail">+91 9876543210</p>
+    </div>
+
+    <div class="contact-box" onclick="toggleContact(this)">
+        <h3>📧 Email</h3>
+        <p class="contact-detail">kgkartgold@gmail.com</p>
+    </div>
+
+    <div class="contact-box" onclick="toggleContact(this)">
+        <h3>📍 Address</h3>
+        <p class="contact-detail">Bangalore, Karnataka</p>
+    </div>
+</section>
+
+
+<!-- ================= FEEDBACK SECTION ================= -->
+<section id="feedback" class="slide feedback-bg">
+    <h2>Customer Feedback</h2>
+
+    <form onsubmit="submitFeedback(event)">
+        <input type="email" id="email" placeholder="Email ID" required>
+        <input type="text" id="phone" placeholder="10-digit Phone Number" required>
+        <textarea id="message" placeholder="Your feedback"></textarea>
+        <button type="submit">Submit Feedback</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2025 1 Gram Gold Jewellery</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
