@@ -36,12 +36,10 @@ header, footer {
     flex-wrap: wrap;
 }
 
-/* ===============================
-   ITEM CARD
-================================ */
+
 .card {
     background: #1a1a1a;
-    padding: 20px;
+    padding: 15px;
     width: 200px;
     border-radius: 12px;
     text-align: center;
@@ -149,13 +147,13 @@ input, textarea {
     background:
         linear-gradient(
             rgba(0, 0, 0, 0.88),
-            rgba(220, 213, 221, 0.95)
+            rgba(29, 23, 29, 0.95)
         ),
-        url("https://images.pexels.com/photos/936031/pexels-photo-936031.jpeg?auto=compress&cs=tinysrgb&w=1600");
+        /* url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTbDGYJpfdu4MYLRgWt0-amIUu08KQNZGp-Q&s"); */
 
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
 
     overflow: hidden;
     display: flex;
@@ -169,9 +167,9 @@ input, textarea {
     inset: 0;
     background: linear-gradient(
         120deg,
-        rgba(141, 15, 15, 0.9),
-        rgba(20,20,20,0.8),
-        rgba(4, 67, 126, 0.95)
+        rgba(173, 169, 169, 0.95)
+        rgba(236, 235, 235, 0.8),
+        rgba(180, 180, 174, 0.95)
     );
     z-index: 1;
 }
@@ -215,7 +213,7 @@ input, textarea {
 .hero-btn:hover {
     background: gold;
     color: black;
-    box-shadow: 0 0 30px gold;
+    box-shadow: 0 0 30px rgba(255, 208, 0, 0.582);
 }
 
 /* Gold particles */
@@ -477,7 +475,7 @@ input, textarea {
 }
 
 .contact-box {
-    background: #fff;
+    background: #4e4848;
     margin: 15px auto;
     max-width: 350px;
     padding: 15px;

@@ -1,0 +1,51 @@
+Customer Feedback Records
+--------------------------
+Email: ekakshgavali@gamail.com
+Phone: 7337857503
+Message: good product
+-----------------
+Email: abc@gmail.com
+Phone: 9902165450
+Message: nice profile
+-----------------
+Email: mdmustafa61750@gmail.com
+Phone: 3292349233
+Message: nice item
+-----------------
+Email: mdmustafa61750@gmail.com
+Phone: 3292349233
+Message: item is nice
+-----------------
+Email: chimmu19@gmail.com
+Phone: 6361753413
+Message: product is good
+
+-----------------
+Email: SHrinidhi@gmail.com
+Phone: 2482943227
+Message: product!!
+-----------------
+Email: 1ds24cs199@gmai.com
+Phone: 3259292359
+Message: nice product!!
+-----------------
+Email: SHrinidhi@gmail.com
+Phone: 2482943227
+Message: product
+-----------------
+Email: ekakshgavali@gamail.com
+Phone: 1234567896
+Message: good!!
+-----------------
+Email: xyz@gmail.com
+Phone: 9087654321
+Message: hwy!!
+-----------------
+Email: xyz@gmail.com
+Phone: 9087654321
+Message: nice product!!
+-----------------
+Email: ekakshgavali@gamail.com
+Phone: 1234567896
+Message: skadasdba,ds
+-----------------

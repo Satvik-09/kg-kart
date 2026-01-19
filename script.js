@@ -92,9 +92,6 @@ Message: ${message}`
     .then(() => {
         alert("Feedback submitted successfully!");
         document.getElementById("feedbackForm").reset();
-    })
-    .catch(() => {
-        alert("Error submitting feedback");
     });
 }
 
